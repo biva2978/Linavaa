@@ -43,11 +43,12 @@
 
 * { box-sizing: border-box; }
 
-html, body {
+html, body, #root {
   margin: 0; padding: 0;
+  height: 100%;
   font-family: 'Inter', -apple-system, system-ui, sans-serif;
   font-feature-settings: "ss01", "cv11";
-  background: oklch(0.94 0.02 65);
+  background: var(--cream);
   color: var(--ink-900);
   -webkit-font-smoothing: antialiased;
 }
@@ -243,8 +244,8 @@ html, body {
 /* ============== Cycle Dial ============== */
 .dial-wrap {
   position: relative;
-  width: 264px;
-  height: 264px;
+  width: min(264px, 80vw);
+  height: min(264px, 80vw);
   margin: 0 auto;
 }
 

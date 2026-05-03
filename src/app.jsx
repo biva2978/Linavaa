@@ -269,29 +269,8 @@ function Root() {
   const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
   return (
     <>
-      <div style={{
-        minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
-        padding: 30, gap: 30,
-        background: 'radial-gradient(ellipse at top, oklch(0.97 0.025 50), oklch(0.93 0.025 65))',
-      }}>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 24 }}>
-          <div style={{ textAlign: 'center', maxWidth: 380 }}>
-            <div className="eyebrow" style={{ color: 'oklch(0.55 0.13 40)' }}>SHOKHII · MVP PROTOTYPE</div>
-            <div className="serif" style={{ fontSize: 36, marginTop: 8, lineHeight: 1.1, color: 'oklch(0.25 0.02 50)' }}>
-              A best-friend in <em style={{ color: 'oklch(0.55 0.13 40)' }}>your pocket</em>.
-            </div>
-            <div style={{ fontSize: 14, color: 'oklch(0.45 0.02 50)', marginTop: 12, lineHeight: 1.5 }}>
-              Cycle, mood, journal, discreet pad delivery, women-friendly care directory — built for Bangladesh.
-              Use the tab bar to navigate; toggle <span className="kbd">Tweaks</span> to change cycle day, theme, or trigger Disguise mode.
-            </div>
-          </div>
-          <IOSDevice width={390} height={844}>
-            <App />
-          </IOSDevice>
-          <div className="muted" style={{ fontSize: 12, fontFamily: 'JetBrains Mono, monospace', letterSpacing: '0.05em' }}>
-            shokhii.app · phase 1 mvp · 10 features
-          </div>
-        </div>
+      <div style={{ width: '100vw', height: '100dvh', overflow: 'hidden' }}>
+        <App />
       </div>
       <ShokhiiTweaks tweaks={tweaks} setTweak={setTweak} />
     </>
