@@ -1,0 +1,11 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "public",
+  "installCommand": "echo skip",
+  "headers": [
+    {
+      "source": "/src/:path*.jsx",
+      "headers": [{ "key": "Content-Type", "value": "text/javascript" }]
+    }
+  ]
+}
